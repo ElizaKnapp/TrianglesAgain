@@ -11,7 +11,7 @@ public class PointTester {
     System.out.println(t3.equals(t2));
     System.out.println(t3.equals(t1));
     */
-
+/*
     //scalene
     Point t1 = new Point(0, 4);
     Point t2 = new Point(0, 0);
@@ -32,6 +32,10 @@ public class PointTester {
     yay.setVertex(1, t4);
     System.out.println(yay);
     System.out.println(yay.classify());
+    */
+
+    Triangle test = new Triangle(1, 1, 1, 1, 1, 1);
+    System.out.println(test);
 
 
 

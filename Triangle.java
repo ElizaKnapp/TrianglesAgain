@@ -8,9 +8,12 @@ public class Triangle{
   }
 
   public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
-    Point v1 = new Point(x1, y1);
-    Point v2 = new Point(x2, y2);
-    Point v3 = new Point(x3, y3);
+    Point a = new Point(x1, y1);
+    Point b = new Point(x2, y2);
+    Point c = new Point(x3, y3);
+    v1 = a;
+    v2 = b;
+    v3 = c;
   }
 
   public double getPerimeter() {
@@ -27,12 +30,12 @@ public class Triangle{
   }
 
   public String classify() {
-    double dist1 = v1.distanceTo(v2);
-    double dist2 = v2.distanceTo(v3);
-    double dist3 = v3.distanceTo(v1);
-    if (dist1 == dist2 && dist2 == dist3) return "Equilateral";
-    if (dist1 == dist2 || dist2 == dist3 || dist1 == dist3) return "Isosceles";
-    else return "Scalene";
+    double dist1 = Math.round(v1.distanceTo(v2) * 10000) / 10000.0;
+    double dist2 = Math.round(v2.distanceTo(v3) * 10000) / 10000.0;
+    double dist3 = Math.round(v3.distanceTo(v1) * 10000) / 10000.0;
+    if (dist1 == dist2 && dist2 == dist3) return "equilateral";
+    if (dist1 == dist2 || dist2 == dist3 || dist1 == dist3) return "isosceles";
+    else return "scalene";
   }
 
   public String toString() {
