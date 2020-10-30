@@ -19,5 +19,15 @@ public class Point {
     return y;
   }
 
+  public double distanceTo(Point other) {
+    double xD = x - other.x;
+    double yD = y - other.y;
+    return Math.sqrt(xD * xD + yD * yD);
+  }
+
+  public boolean equals(Point other) {
+    return (x == other.x && y == other.y);
+  }
+
 
 }
