@@ -20,8 +20,19 @@ public class PointTester {
     System.out.println(yay.getPerimeter());//12
     System.out.println(yay.getArea());//6
     System.out.println(yay.classify()); //scalene
-
     System.out.println(yay);
+
+    Point t4 = new Point(5, 2);
+    yay.setVertex(2, t4);
+  //  System.out.println(yay.getPerimeter());//
+  //  System.out.println(yay.getArea());//
+  //  System.out.println(yay.classify()); //isosceles
+    System.out.println(yay);
+    yay.setVertex(0, t4);
+    yay.setVertex(1, t4);
+    System.out.println(yay);
+    System.out.println(yay.classify());
+
 
 
   }
