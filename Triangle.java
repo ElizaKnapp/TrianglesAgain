@@ -26,5 +26,18 @@ public class Triangle{
     (semiP - v3.distanceTo(v1)));
   }
 
+  public String classify() {
+    double dist1 = v1.distanceTo(v2);
+    double dist2 = v2.distanceTo(v3);
+    double dist3 = v3.distanceTo(v1);
+    if (dist1 == dist2 && dist2 == dist3) return "Equilateral";
+    if (dist1 == dist2 || dist2 == dist3 || dist1 == dist3) return "Isosceles";
+    else return "Scalene";
+  }
+
+  public String toString() {
+    return "v1" + v1 + " v2" + v2 + " v3" + v3;
+
+  }
 
 }

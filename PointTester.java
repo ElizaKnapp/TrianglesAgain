@@ -19,6 +19,9 @@ public class PointTester {
     Triangle yay = new Triangle(t1, t2, t3);
     System.out.println(yay.getPerimeter());//12
     System.out.println(yay.getArea());//6
+    System.out.println(yay.classify()); //scalene
+
+    System.out.println(yay);
 
 
   }
